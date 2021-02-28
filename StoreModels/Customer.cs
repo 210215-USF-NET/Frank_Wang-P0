@@ -10,7 +10,7 @@ namespace StoreModels
     {
         private string firstName;
         private string lastName;
-        private int phoneNumber;
+        private string phoneNumber;
         private int customerID;
 
         public string FirstName 
@@ -39,10 +39,11 @@ namespace StoreModels
                 lastName = value;
             }
         }
-        public int PhoneNumber
+        public string PhoneNumber
         {
             get { return phoneNumber; }
             set{
+                
                 if (value == null || value.Equals(""))
                 {
                     throw new ArgumentNullException("Enter a valid phone number");
@@ -51,6 +52,8 @@ namespace StoreModels
         }
 
         public int CustomerID { get; set; }
+
+
 
     }
 }

@@ -2,14 +2,14 @@ C:\Users\Frank\Revature Training\Frank_Wang-P0\StoreDL\bin\Debug\net5.0\StoreDL.
 C:\Users\Frank\Revature Training\Frank_Wang-P0\StoreDL\bin\Debug\net5.0\StoreDL.dll
 C:\Users\Frank\Revature Training\Frank_Wang-P0\StoreDL\bin\Debug\net5.0\ref\StoreDL.dll
 C:\Users\Frank\Revature Training\Frank_Wang-P0\StoreDL\bin\Debug\net5.0\StoreDL.pdb
+C:\Users\Frank\Revature Training\Frank_Wang-P0\StoreDL\bin\Debug\net5.0\StoreModels.dll
+C:\Users\Frank\Revature Training\Frank_Wang-P0\StoreDL\bin\Debug\net5.0\StoreModels.pdb
 C:\Users\Frank\Revature Training\Frank_Wang-P0\StoreDL\obj\Debug\net5.0\StoreDL.csprojAssemblyReference.cache
 C:\Users\Frank\Revature Training\Frank_Wang-P0\StoreDL\obj\Debug\net5.0\StoreDL.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\Frank\Revature Training\Frank_Wang-P0\StoreDL\obj\Debug\net5.0\StoreDL.AssemblyInfoInputs.cache
 C:\Users\Frank\Revature Training\Frank_Wang-P0\StoreDL\obj\Debug\net5.0\StoreDL.AssemblyInfo.cs
 C:\Users\Frank\Revature Training\Frank_Wang-P0\StoreDL\obj\Debug\net5.0\StoreDL.csproj.CoreCompileInputs.cache
+C:\Users\Frank\Revature Training\Frank_Wang-P0\StoreDL\obj\Debug\net5.0\StoreDL.csproj.CopyComplete
 C:\Users\Frank\Revature Training\Frank_Wang-P0\StoreDL\obj\Debug\net5.0\StoreDL.dll
 C:\Users\Frank\Revature Training\Frank_Wang-P0\StoreDL\obj\Debug\net5.0\ref\StoreDL.dll
 C:\Users\Frank\Revature Training\Frank_Wang-P0\StoreDL\obj\Debug\net5.0\StoreDL.pdb
-C:\Users\Frank\Revature Training\Frank_Wang-P0\StoreDL\bin\Debug\net5.0\StoreModels.dll
-C:\Users\Frank\Revature Training\Frank_Wang-P0\StoreDL\bin\Debug\net5.0\StoreModels.pdb
-C:\Users\Frank\Revature Training\Frank_Wang-P0\StoreDL\obj\Debug\net5.0\StoreDL.csproj.CopyComplete

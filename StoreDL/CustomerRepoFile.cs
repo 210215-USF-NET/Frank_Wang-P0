@@ -1,28 +1,25 @@
 using System.Collections.Generic;
-using System;
+using StoreModels;
 using System.IO;
 using System.Text.Json;
-using StoreModels;
-
+using System;
 
 namespace StoreDL
 {
-    public class CustomerRepoFile : ICustomerRepository
+    public class CustomerRepoFile :ICustomerRepository  
     {
         private string jsonString;
-        private string filePath = "./StoreDL/CustomerFiles.json";
+        private string filePath = "../StoreDL/CustomerRepoFile.json";
+        public Customer AddCustomer(Customer newCustomer)
         {
-            List<Customer> customerFromFile = GetCustomer();
-            customerFromFile.Add(newCustomer);
-            jsonString = JsonSerializer.Serialize(customerFromFile);
+            List<Customer> customersFromFile = GetCustomers();
+            customersFromFile.Add(newCustomer);
+            jsonString = JsonSerializer.Serialize(customersFromFile);
             File.WriteAllText(filePath, jsonString);
             return newCustomer;
-
-        }
-    
-
-     
-        public List<Customer> GetCustomer()
+            
+        }   
+        public List<Customer> GetCustomers()
         {
             try
             {
@@ -30,10 +27,13 @@ namespace StoreDL
             }
             catch (Exception)
             {
-                
-               return new List<Customer>();
+                return new List<Customer>();
             }
-         
             return JsonSerializer.Deserialize<List<Customer>>(jsonString);
-        }
+
+    
+    }
+    
+
+}
 }

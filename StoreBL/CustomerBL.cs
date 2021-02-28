@@ -7,7 +7,7 @@ using StoreDL;
 
 namespace StoreBL
 {
-    public class CustomerBL : ICustomerBL;
+    public class CustomerBL : ICustomerBL
     
 
     {
@@ -21,6 +21,11 @@ namespace StoreBL
             _repo.AddCustomer(newCustomer);
         }
 
+        public List<Customer> GetCustomer()
+        {
+            throw new NotImplementedException();
+        }
+
         public List<Customer> GetCustomers()
         {
             return _repo.GetCustomers();
@@ -29,13 +34,3 @@ namespace StoreBL
     }
 }
 }
-    public override bool Equals(object obj)
-    {
-        return obj is CustomerBL bL &&
-               EqualityComparer<ICustomerRepository>.Default.Equals(_repo, bL._repo);
-    }
-
-    public override int GetHashCode()
-    {
-        return HashCode.Combine(_repo);
-    }

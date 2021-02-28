@@ -1,5 +1,8 @@
 ﻿using System;
 using StoreModels;
+using StoreDL;
+using StoreBL;
+
 
 
 namespace StoreUI
@@ -8,7 +11,7 @@ namespace StoreUI
     {
         static void Main(string[] args)
         {
-            IMenu customer = new MainMenu(new CustomerBL(new CustomerRepoFile));
+            IMenu customer = new MainMenu(new CustomerBL(new CustomerRepoFile()));
             customer.Start();
         }
     }

@@ -10,5 +10,7 @@ namespace StoreModels
         public Location Location { get; set; }
         public double Total { get; set; }
         public int OrderID { get; set; }
+
+        
     }
 }

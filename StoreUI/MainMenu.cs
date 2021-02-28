@@ -7,20 +7,18 @@ namespace StoreUI
 {
     public class MainMenu : IMenu
     {
-        Boolean stay = true;
-        public MainMenu(){
+        private ICustomerBL _customerBL;
 
+        public MainMenu(ICustomerBL customerBL)
+        {
+            _customerBL = customerBL;
         }
-
-        public void End(){
-            active = false;
-        }
-
         public void Start(){
+            Boolean stay = true;
             do{
-                Console.WriteLine("Please Select an Option Below: ");
-                Console.WriteLine("[1] New Order");
-                Console.WriteLine("[2] Contact Support");
+                Console.WriteLine("Welcome to the Store! Which User are You?");
+                Console.WriteLine("[1] Customer");
+                Console.WriteLine("[2] Manager");
                 Console.WriteLine("[3] Exit");
                 Console.WriteLine("Enter Your Selection: ");
 
@@ -29,10 +27,10 @@ namespace StoreUI
                 switch (userInput)
                 {
                         case "1":
-                        CustomerInfo();
+                        CreateCustomer();
                         break;
                     case "2":
-                        //Support
+                        //managermenu
                         break;
                     case "3":
                         ExitUI();
@@ -43,12 +41,29 @@ namespace StoreUI
                 }
             } while (stay);
         }        
-        public void CustomerInfo()
+        public void CreateCustomer()
         {
-
+            Customer newCustomer = new Customer();
+            Console.WriteLine("Enter Your First Name: ");
+            newCustomer.FirstName = Console.ReadLine();
+            Console.WriteLine("Enter Your Last Name: ");
+            newCustomer.LastName = Console.ReadLine();
+            Console.WriteLine("Please Enter Your Phone Number ((###)-###-####): ");
+            newCustomer.PhoneNumber = Console.ReadLine();
+            _customerBL.AddCustomer(newCustomer);
+            Console.WriteLine($"Added Customer, {newCustomer.FirstName} {newCustomer.LastName} !");
         }
         public void ExitUI()
-        {}
+        {
+            Console.WriteLine("Thank You! Please Shop with us again");
+        }
+
+        public void CreateOrder()
+        {
+
+            
+
+        }
         
                 
     }
