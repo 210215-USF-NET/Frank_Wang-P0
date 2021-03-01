@@ -11,8 +11,12 @@ namespace StoreUI
     {
         static void Main(string[] args)
         {
-            IMenu customer = new MainMenu(new CustomerBL(new CustomerRepoFile()));
-            customer.Start();
+
+            
+            IMenu menu = new MainMenu(new CustomerBL(new CustomerRepoFile()), new LocationBL(new LocationRepoFile()), new OrderBL(new OrderRepoFile()), new ProductBL(new ProductRepoFile()));
+            menu.Start();
         }
     }
 }
+
+

@@ -4,11 +4,11 @@ namespace StoreModels
     {
         private Customer customer;
         private Location location;
-        private double total;
+        private double orderTotal;
         private int orderID;
         public Customer Customer { get; set; }
         public Location Location { get; set; }
-        public double Total { get; set; }
+        public double OrderTotal { get; set; }
         public int OrderID { get; set; }
 
         

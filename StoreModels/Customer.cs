@@ -48,10 +48,12 @@ namespace StoreModels
                 {
                     throw new ArgumentNullException("Enter a valid phone number");
                 }
+                phoneNumber = value;
             }
         }
 
         public int CustomerID { get; set; }
+        public override string ToString() => $"Customer Details:\n\tName: {this.FirstName} {this.LastName} \n\tPhone: {this.PhoneNumber}";
 
 
 

@@ -7,11 +7,16 @@ namespace StoreUI
 {
     public class MainMenu : IMenu
     {
+        private IMenu customerMenu;
+        private IMenu managerMenu;
         private ICustomerBL _customerBL;
 
-        public MainMenu(ICustomerBL customerBL)
+        public MainMenu(ICustomerBL customerBL, ILocationBL locationBL,  IOrderBL orderBL, IProductBL productBL)
         {
+            customerMenu = new CustomerMenu(customerBL, locationBL, orderBL, productBL);
             _customerBL = customerBL;
+            managerMenu = new ManagerMenu(customerBL, locationBL, orderBL, productBL);
+
         }
         public void Start(){
             Boolean stay = true;
@@ -27,12 +32,13 @@ namespace StoreUI
                 switch (userInput)
                 {
                         case "1":
-                        CreateCustomer();
+                        customerMenu.Start();
                         break;
                     case "2":
-                        //managermenu
+                        managerMenu.Start();
                         break;
                     case "3":
+                        stay = false;
                         ExitUI();
                         break;
                     default:
@@ -41,30 +47,12 @@ namespace StoreUI
                 }
             } while (stay);
         }        
-        public void CreateCustomer()
-        {
-            Customer newCustomer = new Customer();
-            Console.WriteLine("Enter Your First Name: ");
-            newCustomer.FirstName = Console.ReadLine();
-            Console.WriteLine("Enter Your Last Name: ");
-            newCustomer.LastName = Console.ReadLine();
-            Console.WriteLine("Please Enter Your Phone Number ((###)-###-####): ");
-            newCustomer.PhoneNumber = Console.ReadLine();
-            _customerBL.AddCustomer(newCustomer);
-            Console.WriteLine($"Added Customer, {newCustomer.FirstName} {newCustomer.LastName} !");
-        }
+
         public void ExitUI()
         {
             Console.WriteLine("Thank You! Please Shop with us again");
         }
-
-        public void CreateOrder()
-        {
-
-            
-
-        }
-        
+      
                 
     }
 }

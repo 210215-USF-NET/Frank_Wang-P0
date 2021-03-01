@@ -8,5 +8,6 @@ namespace StoreBL
     public interface IProductBL
     {
         List<Product> GetProducts();
+        void AddProduct(Product newProduct);
     }
 }

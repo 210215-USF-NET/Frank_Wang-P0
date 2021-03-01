@@ -5,10 +5,10 @@ namespace StoreModels
     /// </summary>
     public class Location
     {
-        private string address;
-        private string locationID;
-        public string Address { get; set; }
-        public string LocationID { get; set; }
+        private string locationAddress;
+        private int locationID;
+        public string LocationAddress { get; set; }
+        public int LocationID { get; set; }
     
 
     }

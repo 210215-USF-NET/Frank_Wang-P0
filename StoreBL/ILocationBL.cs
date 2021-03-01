@@ -9,5 +9,7 @@ namespace StoreBL
     {
         List<Location> GetLocations();
         Location GetSpecificLocation(int locationID);
+
+        void AddLocation(Location newLocation);
     }
 }
