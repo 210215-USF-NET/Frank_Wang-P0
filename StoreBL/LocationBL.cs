@@ -15,7 +15,8 @@ namespace StoreBL
             _repo = repo;
         }
         
-        public void AddLocation(Location newLocation){
+        public void AddLocation(Location newLocation)
+        {
             _repo.AddLocation(newLocation);
         }
         public List<Location> GetLocations()
@@ -23,10 +24,7 @@ namespace StoreBL
             return _repo.GetLocations();
         }
 
-        public Location GetSpecificLocation(int locationID)
-        {
-            throw new System.NotImplementedException();
-        }
+
     }
 
     

@@ -99,7 +99,12 @@ namespace StoreUI
 
             public void InventoryView()
             {
-
+                foreach (var item in _productBL.GetProducts())
+            {
+                Console.WriteLine(item.ToString());
+            }
+            Console.WriteLine("Press any key to continue");
+            Console.ReadLine();
             }
 
             public void UpdateInventory()
@@ -109,7 +114,12 @@ namespace StoreUI
 
             public void ViewLocations()
             {
-
+                foreach (var item in _locationBL.GetLocations())
+            {
+                Console.WriteLine(item.ToString());
+            }
+            Console.WriteLine("Press any key to continue");
+            Console.ReadLine();
             }
 
             public void UpdateLocations()
@@ -127,7 +137,12 @@ namespace StoreUI
 
             public void SearchCustomers()
             {
-
+                foreach (var item in _customerBL.GetCustomer())
+            {
+                Console.WriteLine(item.ToString());
+            }
+            Console.WriteLine("Press any key to continue");
+            Console.ReadLine();
             }
 
 

@@ -23,14 +23,9 @@ namespace StoreBL
 
         public List<Customer> GetCustomer()
         {
-            throw new NotImplementedException();
+            return _repo.GetCustomers();
         }
 
-        public List<Customer> GetCustomers()
-        {
-            return _repo.GetCustomers();
 
-
-    }
 }
 }

@@ -96,7 +96,12 @@ namespace StoreUI
 
             public void CustomerSearch()
             {
-
+                foreach (var item in _customerBL.GetCustomer())
+            {
+                Console.WriteLine(item.ToString());
+            }
+            Console.WriteLine("Press any key to continue");
+            Console.ReadLine();
             }
 
             public void CreateOrder()

@@ -18,5 +18,6 @@ namespace StoreModels
 
         public Chips ChipsType { get; set; }
 
+        public override string ToString() => $"Product Details:\n\tName: {this.ProductName} \n\tProduct Description: {this.ProductDescription} \n\tProduct ID: {this.ProductID} \n\tProduct Price: {this.ProductPrice}";
     }
 }

@@ -10,6 +10,6 @@ namespace StoreModels
         public string LocationAddress { get; set; }
         public int LocationID { get; set; }
     
-
+        public override string ToString() => $"Location Details:\n\tAddress: {this.LocationAddress} \n\tLocationID: {this.LocationAddress}";
     }
 }

@@ -1,41 +1,46 @@
 --Drop sequence for tables
-drop table superpowers;
-drop table heroes;
-drop table elementTypes;
+
+drop table customers;
+drop table products;
+drop table locations;
 
 --creating tables
-create table elementTypes
+
+create table customers
 (
-    id int identity primary key,
-    elementType varchar(20) not null
+    id int IDENTITY primary key,
+    FirstName varchar(50) not null,
+    PhoneNumber varchar(50) not NULL
+    
 );
 
-create table heroes
+create table locations
 (
-    id int identity primary key,
-    heroName varchar(100) not null,
-    hp int not null,
-    elementType int references elementTypes(id)
+    id int IDENTITY primary key,
+    LocationAddress varchar(50) not null,
+    LocationID int not null
 );
 
-create table superpowers
+create table products
 (
-    id int identity primary key,
-    name varchar(50) not null,
-    description varchar(100) not null,
-	damage int not null,
-    hero int unique not null references heroes(id) on delete cascade
+    id int IDENTITY primary key,
+    ProductName varchar(50) not null,
+    ProductDescription varchar(50) not null,
+    ProductID int not null,
+    ProductPrice decimal(10,2) not null
 );
+
+
 
 --Adding seed data
-insert into elementTypes (elementType) values 
-('Water'), ('Earth'), ('Air'), ('Fire');
+--insert into elementTypes (elementType) values 
+--('Water'), ('Earth'), ('Air'), ('Fire');
 
-insert into heroes (heroName, hp, elementType) values
-('Spiderman', 100, 2), ('Thor', 1000, 4);
+--insert into heroes (heroName, hp, elementType) values
+--('Spiderman', 100, 2), ('Thor', 1000, 4);
 
-insert into superpowers (name, description, damage, hero) values
-('Spidey senses', 'Anything a spider can', 10, 1),
-('Lightning control', 'Using a hammer as a conduit he controls lightning', 100, 2);
+--insert into superpowers (name, description, damage, hero) values
+--('Spidey senses', 'Anything a spider can', 10, 1),
+--('Lightning control', 'Using a hammer as a conduit he controls lightning', 100, 2);
 
-select * from heroes inner join superpowers on heroes.id = superpowers.hero;
+--select * from heroes in
