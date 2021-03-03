@@ -109,7 +109,9 @@ namespace StoreUI
 
             public void UpdateInventory()
             {
-
+                Console.WriteLine("Feature Coming Soon!");
+                Console.WriteLine("Press any key to continue");
+                Console.ReadLine();
             }
 
             public void ViewLocations()
