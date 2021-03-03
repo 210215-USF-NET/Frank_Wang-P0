@@ -12,12 +12,14 @@ namespace StoreUI
             private ILocationBL _locationBL;
             private IOrderBL _orderBL;
             private IProductBL _productBL;
-            public ManagerMenu(ICustomerBL customerBL,ILocationBL locationBL,IOrderBL orderBL,IProductBL productBL)
+            private IInventoryBL _inventoryBL;
+            public ManagerMenu(ICustomerBL customerBL,ILocationBL locationBL,IOrderBL orderBL,IProductBL productBL, IInventoryBL inventoryBL)
             {
                 _customerBL = customerBL;
                 _locationBL = locationBL;
                 _orderBL = orderBL;
                 _productBL = productBL;
+                _inventoryBL = inventoryBL;
                 
             }
             
@@ -99,7 +101,7 @@ namespace StoreUI
 
             public void InventoryView()
             {
-                foreach (var item in _productBL.GetProducts())
+                foreach (var item in _inventoryBL.GetInventories())
             {
                 Console.WriteLine(item.ToString());
             }

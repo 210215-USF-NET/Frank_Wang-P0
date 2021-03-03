@@ -11,11 +11,11 @@ namespace StoreUI
         private IMenu managerMenu;
         private ICustomerBL _customerBL;
 
-        public MainMenu(ICustomerBL customerBL, ILocationBL locationBL,  IOrderBL orderBL, IProductBL productBL)
+        public MainMenu(ICustomerBL customerBL, ILocationBL locationBL,  IOrderBL orderBL, IProductBL productBL, IInventoryBL inventoryBL)
         {
             customerMenu = new CustomerMenu(customerBL, locationBL, orderBL, productBL);
             _customerBL = customerBL;
-            managerMenu = new ManagerMenu(customerBL, locationBL, orderBL, productBL);
+            managerMenu = new ManagerMenu(customerBL, locationBL, orderBL, productBL, inventoryBL);
 
         }
         public void Start(){

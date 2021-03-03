@@ -48,5 +48,26 @@ namespace StoreDL
         {
             throw new System.NotImplementedException();
         }
+
+        public Model.Inventory ParseInventory(Entity.Inventory inventory)
+        {
+            return new Model.Inventory
+            {
+                LocationIdentity =  inventory.LocationIdentity,
+                InventoryID =  inventory.InventoryID,
+                InventoryQuantity =  inventory.InventoryQuantity
+
+            };
+        }
+        public Entity.Inventory ParseInventory(Model.Inventory inventory)
+        {
+            return new Entity.Inventory
+        {
+            LocationIdentity = inventory.LocationIdentity,
+            InventoryID = inventory.InventoryID,
+            InventoryQuantity = inventory.InventoryQuantity
+        };
+        }
+        
     }
 }
