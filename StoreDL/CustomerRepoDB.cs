@@ -19,14 +19,14 @@ namespace StoreDL
         } 
         public Model.Customer AddCustomer(Model.Customer newCustomer)
         {
-            _context.Customer.Add(_mapper.ParseCustomer(newCustomer));
+            _context.Customers.Add(_mapper.ParseCustomer(newCustomer));
             _context.SaveChanges();
             return newCustomer;
         }
 
         public List<Model.Customer> GetCustomers()
         {
-            return _context.Customers.Include("phoneNumber").Select(x => _mapper.ParseCustomer(x)).ToList();
+            return _context.Customers.Select(x => _mapper.ParseCustomer(x)).ToList();
         }
     }
 }
