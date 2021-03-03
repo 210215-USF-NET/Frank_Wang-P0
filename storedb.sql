@@ -44,6 +44,17 @@ create table inventory
 
 );
 
+create table orders
+(
+	id int Identity primary key,
+	customer int references customers(id),
+	OrderId int not null,
+	OrderQuantity int not null
+
+
+
+);
+
 
 
 insert into Customers (FirstName, LastName, PhoneNumber) values
@@ -77,6 +88,9 @@ insert into inventory (LocationIdentity, InventoryID, InventoryQuantity) values
 	(3, 1003, 2),
 	(3, 1004, 3);
 
+insert into orders (customer, OrderId, OrderQuantity) values
+	(0, 4, 2);
+
 	
 
 
@@ -84,3 +98,4 @@ insert into inventory (LocationIdentity, InventoryID, InventoryQuantity) values
 	Select*From locations;
 	Select*From products;
 	Select *From inventory;
+	Select *From orders;

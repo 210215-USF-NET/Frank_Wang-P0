@@ -1,8 +1,3 @@
-C:\Users\Frank\Revature Training\Frank_Wang-P0\StoreBL\obj\Debug\net5.0\StoreBL.csprojAssemblyReference.cache
-C:\Users\Frank\Revature Training\Frank_Wang-P0\StoreBL\obj\Debug\net5.0\StoreBL.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\Frank\Revature Training\Frank_Wang-P0\StoreBL\obj\Debug\net5.0\StoreBL.AssemblyInfoInputs.cache
-C:\Users\Frank\Revature Training\Frank_Wang-P0\StoreBL\obj\Debug\net5.0\StoreBL.AssemblyInfo.cs
-C:\Users\Frank\Revature Training\Frank_Wang-P0\StoreBL\obj\Debug\net5.0\StoreBL.csproj.CoreCompileInputs.cache
 C:\Users\Frank\Revature Training\Frank_Wang-P0\StoreBL\bin\Debug\net5.0\StoreBL.deps.json
 C:\Users\Frank\Revature Training\Frank_Wang-P0\StoreBL\bin\Debug\net5.0\StoreBL.dll
 C:\Users\Frank\Revature Training\Frank_Wang-P0\StoreBL\bin\Debug\net5.0\ref\StoreBL.dll
@@ -11,6 +6,11 @@ C:\Users\Frank\Revature Training\Frank_Wang-P0\StoreBL\bin\Debug\net5.0\StoreDL.
 C:\Users\Frank\Revature Training\Frank_Wang-P0\StoreBL\bin\Debug\net5.0\StoreModels.dll
 C:\Users\Frank\Revature Training\Frank_Wang-P0\StoreBL\bin\Debug\net5.0\StoreModels.pdb
 C:\Users\Frank\Revature Training\Frank_Wang-P0\StoreBL\bin\Debug\net5.0\StoreDL.pdb
+C:\Users\Frank\Revature Training\Frank_Wang-P0\StoreBL\obj\Debug\net5.0\StoreBL.csprojAssemblyReference.cache
+C:\Users\Frank\Revature Training\Frank_Wang-P0\StoreBL\obj\Debug\net5.0\StoreBL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Frank\Revature Training\Frank_Wang-P0\StoreBL\obj\Debug\net5.0\StoreBL.AssemblyInfoInputs.cache
+C:\Users\Frank\Revature Training\Frank_Wang-P0\StoreBL\obj\Debug\net5.0\StoreBL.AssemblyInfo.cs
+C:\Users\Frank\Revature Training\Frank_Wang-P0\StoreBL\obj\Debug\net5.0\StoreBL.csproj.CoreCompileInputs.cache
 C:\Users\Frank\Revature Training\Frank_Wang-P0\StoreBL\obj\Debug\net5.0\StoreBL.csproj.CopyComplete
 C:\Users\Frank\Revature Training\Frank_Wang-P0\StoreBL\obj\Debug\net5.0\StoreBL.dll
 C:\Users\Frank\Revature Training\Frank_Wang-P0\StoreBL\obj\Debug\net5.0\ref\StoreBL.dll

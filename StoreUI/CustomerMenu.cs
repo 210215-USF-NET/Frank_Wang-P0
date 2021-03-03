@@ -14,12 +14,14 @@ namespace StoreUI
             private ILocationBL _locationBL;
             private IOrderBL _orderBL;
             private IProductBL _productBL;
-            public CustomerMenu(ICustomerBL customerBL,ILocationBL locationBL,IOrderBL orderBL,IProductBL productBL)
+            private IInventoryBL _inventoryBL;
+            public CustomerMenu(ICustomerBL customerBL,ILocationBL locationBL,IOrderBL orderBL,IProductBL productBL, IInventoryBL InventoryBL)
             {
                 _customerBL = customerBL;
                 _locationBL = locationBL;
                 _orderBL = orderBL;
                 _productBL = productBL;
+                _inventoryBL = InventoryBL;
                 
             }
             
@@ -110,7 +112,41 @@ namespace StoreUI
 
             public void CreateOrder()
             {
+            Console.WriteLine("Enter your Phone Number: ");
+            Customer foundCustomer = _customerBL.GetCustomerByName(Console.ReadLine());
+            if (foundCustomer == null)
+            {
+                Console.WriteLine("No customer with that [Phone Number] exists in our Database. Please register to create an order.");
+            }
+            else
+            {
+                Console.WriteLine($"{foundCustomer} \n\t");
+                Console.WriteLine("Here is a list of our products: ");
 
+            
+                foreach (var item in _productBL.GetProducts())
+            
+            {
+                Console.WriteLine(item.ToString());
+            }
+                Order newOrder = new Order();
+                newOrder.Customer = foundCustomer;
+                Console.WriteLine("Select a product you would like to purchase: ");
+                Console.WriteLine("[1] Horizon Original");
+                Console.WriteLine("[2] Horizon Barbeque Chips");
+                Console.WriteLine("[3] Horizon Salt and Vinegar Chips");
+                Console.WriteLine("[4] Horizon Sour Cream and Onion Chips");
+                newOrder.OrderID = int.Parse(Console.ReadLine());
+                Console.WriteLine("Select the quantity: ");
+                newOrder.OrderQuantity = int.Parse(Console.ReadLine());
+
+                _orderBL.AddOrder(newOrder);
+                Console.WriteLine($"You have ordered [{newOrder.OrderQuantity}] product number [{newOrder.OrderID}]");
+
+                
+
+            }
+            
             }
 
             public void SearchLocation()
@@ -125,12 +161,16 @@ namespace StoreUI
 
             public void OrderHistory()
             {
-
+                Console.WriteLine("Feature Coming Soon!");
+                Console.WriteLine("Press any key to continue");
+                Console.ReadLine();
             }
 
             public void LocationHistory()
             {
-
+                Console.WriteLine("Feature Coming Soon!");
+                Console.WriteLine("Press any key to continue");
+                Console.ReadLine();
             }
 
 
