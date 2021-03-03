@@ -21,6 +21,11 @@ namespace StoreBL
             _repo.AddCustomer(newCustomer);
         }
 
+        public Customer GetCustomerByName(string name)
+        {
+            //Check if customer exists
+            return _repo.GetCustomerByName(name);
+        }
         public List<Customer> GetCustomer()
         {
             return _repo.GetCustomers();

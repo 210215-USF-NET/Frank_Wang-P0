@@ -96,12 +96,16 @@ namespace StoreUI
 
             public void CustomerSearch()
             {
-                foreach (var item in _customerBL.GetCustomer())
+            Console.WriteLine("Enter your Phone Number: ");
+            Customer foundCustomer = _customerBL.GetCustomerByName(Console.ReadLine());
+            if (foundCustomer == null)
             {
-                Console.WriteLine(item.ToString());
+                Console.WriteLine("No customer with that [Phone Number] exists in our Database, register or try again.");
             }
-            Console.WriteLine("Press any key to continue");
-            Console.ReadLine();
+            else
+            {
+                Console.WriteLine(foundCustomer.ToString());
+            }
             }
 
             public void CreateOrder()

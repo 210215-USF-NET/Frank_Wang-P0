@@ -15,5 +15,10 @@ namespace StoreDL
             Storage.AllCustomers.Add(newCustomer);
             return newCustomer;
         }
+
+        public Customer GetCustomerByName(string name)
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }

@@ -18,7 +18,13 @@ namespace StoreDL
             File.WriteAllText(filePath, jsonString);
             return newCustomer;
             
-        }   
+        }
+
+        public Customer GetCustomerByName(string name)
+        {
+            throw new NotImplementedException();
+        }
+
         public List<Customer> GetCustomers()
         {
             try

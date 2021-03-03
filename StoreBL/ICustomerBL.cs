@@ -11,5 +11,8 @@ namespace StoreBL
     {
         List <Customer> GetCustomer();
         void AddCustomer(Customer newCustomer);
+
+        Customer GetCustomerByName(string name);
+        
     }
 }

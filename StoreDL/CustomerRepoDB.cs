@@ -4,6 +4,7 @@ using Entity = StoreDL.Entities;
 using System.Linq;
 using Microsoft.EntityFrameworkCore;
 using System;
+using StoreModels;
 
 namespace StoreDL
 {
@@ -23,7 +24,14 @@ namespace StoreDL
             _context.SaveChanges();
             return newCustomer;
         }
-        
+
+        public Customer GetCustomerByName(string name)
+        {
+            return _context.Customers
+            .Select(x => _mapper.ParseCustomer(x))
+            .ToList()
+            .FirstOrDefault(x => x.PhoneNumber == name);        
+        }
 
         public List<Model.Customer> GetCustomers()
         {
