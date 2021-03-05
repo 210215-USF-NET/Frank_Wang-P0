@@ -19,6 +19,11 @@ namespace StoreBL
         {
             _repo.AddLocation(newLocation);
         }
+
+        public Location GetLocationByName(string name)
+        {
+            return _repo.GetLocationByName(name);
+        }
         public List<Location> GetLocations()
         {
             return _repo.GetLocations();

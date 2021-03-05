@@ -19,6 +19,11 @@ namespace StoreDL
             return newInventory;
         }
 
+        public Inventory GetInventoryByName(string name)
+        {
+            throw new NotImplementedException();
+        }
+
         public List<Inventory> GetInventories()
         {
             try{

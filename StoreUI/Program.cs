@@ -26,7 +26,7 @@ namespace StoreUI
 
             using var context = new StoreDBContext(options);
             
-            IMenu menu = new MainMenu(new CustomerBL(new CustomerRepoDB(context, new StoreMapper())), new LocationBL(new LocationRepoFile()), new OrderBL(new OrderRepoFile()), new ProductBL(new ProductRepoFile()), new InventoryBL(new InventoryRepoDB(context, new StoreMapper())));
+            IMenu menu = new MainMenu(new CustomerBL(new CustomerRepoDB(context, new StoreMapper())), new LocationBL(new LocationRepoFile()), new OrderBL(new OrderRepoFile()), new ProductBL(new ProductRepoDB(context, new StoreMapper())), new InventoryBL(new InventoryRepoDB(context, new StoreMapper())));
             menu.Start();
         }
     }

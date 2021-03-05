@@ -13,8 +13,8 @@ namespace StoreDL
         Entity.Customer ParseCustomer(Model.Customer customer);
         Model.Location ParseLocations(Entity.Location location);
         Entity.Location ParseLocations(Model.Location location);
-        Model.Product ParseProducts(Entity.Product product);
-        Entity.Product ParseProducts(Model.Product product);
+        Model.Product ParseProduct(Entity.Product product);
+        Entity.Product ParseProduct(Model.Product product);
 
         Model.Inventory ParseInventory(Entities.Inventory inventory);
         Entities.Inventory ParseInventory(Model.Inventory inventory);

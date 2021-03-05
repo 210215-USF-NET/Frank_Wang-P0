@@ -7,5 +7,6 @@ namespace StoreDL
     {
         List<Order> GetOrders();
         Order AddOrder(Order newOrder);
+        Order GetOrdersByName(string name);
     }
 }

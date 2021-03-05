@@ -39,14 +39,27 @@ namespace StoreDL
             throw new System.NotImplementedException();
         }
 
-        public Model.Product ParseProducts(Entity.Product product)
+        public Model.Product ParseProduct(Entity.Product product)
         {
-            throw new System.NotImplementedException();
+            return new Model.Product
+            {
+                ProductName = product.ProductName,
+                ProductDescription = product.ProductDescription,
+                ProductID = product.ProductID,
+                ProductPrice = (double)product.ProductPrice
+
+            };
         }
 
-        public Entity.Product ParseProducts(Model.Product product)
+        public Entity.Product ParseProduct(Model.Product product)
         {
-            throw new System.NotImplementedException();
+            return new Entity.Product
+            {
+                ProductName = product.ProductName,
+                ProductDescription = product.ProductDescription,
+                ProductID = product.ProductID,
+                ProductPrice = (decimal)product.ProductPrice
+            };
         }
 
         public Model.Inventory ParseInventory(Entity.Inventory inventory)

@@ -9,7 +9,7 @@ namespace StoreModels
     public class Customer
     {
         private string firstName;
-        private string lastName;
+        private string lastName; 
         private string phoneNumber;
         private int customerID;
 

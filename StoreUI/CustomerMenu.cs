@@ -24,6 +24,10 @@ namespace StoreUI
                 _inventoryBL = InventoryBL;
                 
             }
+
+            public Customer currentCustomer = new Customer();
+            public Location currentLocation = new Location();
+            public Product currentProduct = new Product();
             
             
         
@@ -124,24 +128,33 @@ namespace StoreUI
                 Console.WriteLine("Here is a list of our products: ");
 
             
-                foreach (var item in _productBL.GetProducts())
+                foreach (var item in _productBL.GetProduct())
             
             {
                 Console.WriteLine(item.ToString());
             }
                 Order newOrder = new Order();
+                Product P = new Product();
                 newOrder.Customer = foundCustomer;
-                Console.WriteLine("Select a product you would like to purchase: ");
+                Console.WriteLine($"{newOrder.Customer}");
+                Console.WriteLine($"{newOrder.Customer.PhoneNumber}");
+                //currentLocation = SearchLocation(Console.ReadLine());
+                newOrder.Location = currentLocation;
+                Console.WriteLine("Enter the Name of the product you would like to purchase: ");
+                Product selectProduct = _productBL.GetProductByName(Console.ReadLine());
+                newOrder.Product = selectProduct;
                 Console.WriteLine("[1] Horizon Original");
                 Console.WriteLine("[2] Horizon Barbeque Chips");
                 Console.WriteLine("[3] Horizon Salt and Vinegar Chips");
                 Console.WriteLine("[4] Horizon Sour Cream and Onion Chips");
-                newOrder.OrderID = int.Parse(Console.ReadLine());
+                //newOrder.OrderID = int.Parse(Console.ReadLine());
+                Console.WriteLine($"You have ordered item #{selectProduct.ProductID}");
                 Console.WriteLine("Select the quantity: ");
                 newOrder.OrderQuantity = int.Parse(Console.ReadLine());
+                //newOrder.OrderTotal = 
 
                 _orderBL.AddOrder(newOrder);
-                Console.WriteLine($"You have ordered [{newOrder.OrderQuantity}] product number [{newOrder.OrderID}]");
+                Console.WriteLine($"You have ordered item #[{newOrder.OrderID}] with a quantity of [{newOrder.OrderQuantity}]");
 
                 
 
@@ -172,6 +185,10 @@ namespace StoreUI
                 Console.WriteLine("Press any key to continue");
                 Console.ReadLine();
             }
+            
+
+            
+            
 
 
         }

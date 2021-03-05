@@ -4,6 +4,7 @@ drop table customers;
 drop table products;
 drop table locations; 
 drop table inventory;
+drop table orders;
 
 --Create Tables
 
@@ -69,10 +70,10 @@ insert into locations (LocationAddress, LocationID) values
 
 
 insert into Products (ProductName, ProductDescription, ProductID, ProductPrice) values
-	('Horizon Original', 'Original Flavored Chips', '1001', '5.99'),
-	('Horizon Barbeque Chips', 'Barbeque Flavored Chips', '1002', '6.20'),
-	('Horizon Salt and Vinegar', 'Salt and Vinegar Flavored Chips', '1003', '4.99'),
-	('Horizon Sour Cream and Onion', 'Sour Crean and Onion Flavored Chips', '1004', '5.49');
+	('Original', 'Original Flavored Chips', '1001', '5.99'),
+	('Barbeque Chips', 'Barbeque Flavored Chips', '1002', '6.20'),
+	('Salt and Vinegar', 'Salt and Vinegar Flavored Chips', '1003', '4.99'),
+	('Sour Cream and Onion', 'Sour Crean and Onion Flavored Chips', '1004', '5.49');
 
 insert into inventory (LocationIdentity, InventoryID, InventoryQuantity) values
 	(1, 1001, 80),
@@ -89,7 +90,7 @@ insert into inventory (LocationIdentity, InventoryID, InventoryQuantity) values
 	(3, 1004, 3);
 
 insert into orders (customer, OrderId, OrderQuantity) values
-	(0, 4, 2);
+	(1, 4, 2);
 
 	
 

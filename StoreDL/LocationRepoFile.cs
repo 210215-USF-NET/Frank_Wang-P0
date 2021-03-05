@@ -22,7 +22,12 @@ namespace StoreDL
         }
 
 
+        public Location GetLocationByName(string name)
+        {
+            throw new NotImplementedException();
+        }
         public List<Location> GetLocations()
+
         {
             try
             {

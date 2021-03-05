@@ -7,7 +7,9 @@ namespace StoreBL
 {
     public interface IProductBL
     {
-        List<Product> GetProducts();
+        List<Product> GetProduct();
         void AddProduct(Product newProduct);
+
+        Product GetProductByName(string name);
     }
 }

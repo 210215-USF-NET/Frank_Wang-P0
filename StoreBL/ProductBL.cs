@@ -17,7 +17,13 @@ namespace StoreBL
         {
             _repo.AddProduct(newProduct);
         }
-        public List<Product> GetProducts()
+
+
+        public Product GetProductByName(string name)
+        {
+            return _repo.GetProductByName(name);
+        }
+        public List<Product> GetProduct()
         {
             return _repo.GetProducts();
         }

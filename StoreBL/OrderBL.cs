@@ -16,6 +16,11 @@ namespace StoreBL
         {
             _repo.AddOrder(newOrder);
         }
+
+        public Order GetOrdersByName(string name)
+        {
+            return _repo.GetOrdersByName(name);
+        }
         public List<Order> GetOrders()
         {
             return _repo.GetOrders();

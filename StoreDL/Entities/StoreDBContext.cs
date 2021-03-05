@@ -20,6 +20,7 @@ namespace StoreDL.Entities
         public virtual DbSet<Customer> Customers { get; set; }
         public virtual DbSet<Inventory> Inventories { get; set; }
         public virtual DbSet<Location> Locations { get; set; }
+        public virtual DbSet<Order> Orders { get; set; }
         public virtual DbSet<Product> Products { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
@@ -80,6 +81,20 @@ namespace StoreDL.Entities
                 entity.Property(e => e.LocationId).HasColumnName("LocationID");
             });
 
+            modelBuilder.Entity<Order>(entity =>
+            {
+                entity.ToTable("orders");
+
+                entity.Property(e => e.Id).HasColumnName("id");
+
+                entity.Property(e => e.Customer).HasColumnName("customer");
+
+                entity.HasOne(d => d.CustomerNavigation)
+                    .WithMany(p => p.Orders)
+                    .HasForeignKey(d => d.Customer)
+                    .HasConstraintName("FK__orders__customer__3B0BC30C");
+            });
+
             modelBuilder.Entity<Product>(entity =>
             {
                 entity.ToTable("products");
@@ -91,7 +106,7 @@ namespace StoreDL.Entities
                     .HasMaxLength(50)
                     .IsUnicode(false);
 
-                entity.Property(e => e.ProductId).HasColumnName("ProductID");
+                entity.Property(e => e.ProductID).HasColumnName("ProductID");
 
                 entity.Property(e => e.ProductName)
                     .IsRequired()

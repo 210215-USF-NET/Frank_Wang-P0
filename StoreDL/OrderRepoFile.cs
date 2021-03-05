@@ -19,6 +19,10 @@ namespace StoreDL
             return newOrder;
         }
 
+        public Order GetOrdersByName(string name)
+        {
+            throw new NotImplementedException();
+        }
         public List<Order> GetOrders()
         {
             try

@@ -19,6 +19,11 @@ namespace StoreDL
             return newProduct;
             
         }   
+
+        public Product GetProductByName(string name)
+        {
+            throw new NotImplementedException();
+        }
         public List<Product> GetProducts()
         {
             try
