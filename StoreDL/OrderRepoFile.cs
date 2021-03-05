@@ -19,7 +19,7 @@ namespace StoreDL
             return newOrder;
         }
 
-        public Order GetOrdersByName(string name)
+        public Order GetOrderByName(string name)
         {
             throw new NotImplementedException();
         }

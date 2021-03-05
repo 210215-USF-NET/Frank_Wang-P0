@@ -7,5 +7,7 @@ namespace StoreDL
     {
         public static List<Customer> AllCustomers = new List<Customer>(); 
         public static List<Product> AllProducts = new List<Product>();
+
+        public static List<Order> AllOrders = new List<Order>();
     }
 }

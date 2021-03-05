@@ -7,9 +7,10 @@ namespace StoreBL
 {
     public interface IOrderBL
     {
-        List<Order> GetOrders();
+        List<Order> GetOrder();
+        
 
         void AddOrder(Order newOrder);
-        Order GetOrdersByName(string name);
+        //Order GetOrderByName(string name);
     }
 }

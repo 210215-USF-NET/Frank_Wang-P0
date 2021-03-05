@@ -81,6 +81,26 @@ namespace StoreDL
             InventoryQuantity = inventory.InventoryQuantity
         };
         }
-        
+       
+        public Model.Order ParseOrder(Entity.Order order)
+        {
+            return new Model.Order
+            {
+                OrderID = order.OrderID,
+                OrderQuantity = order.OrderQuantity,
+                OrderTotal = order.OrderTotal
+            };
+        }
+
+        public Entity.Order ParseOrder(Model.Order order)
+        {
+            return new Entity.Order
+            {
+                OrderID = order.OrderID,
+                OrderQuantity = order.OrderQuantity,
+                OrderTotal = order.OrderTotal
+            };
+        }
+      
     }
 }

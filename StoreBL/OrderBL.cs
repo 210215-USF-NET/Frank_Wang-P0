@@ -17,13 +17,15 @@ namespace StoreBL
             _repo.AddOrder(newOrder);
         }
 
-        public Order GetOrdersByName(string name)
-        {
-            return _repo.GetOrdersByName(name);
-        }
-        public List<Order> GetOrders()
+        //public Order GetOrderByName(int name)
+        //{
+            //return _repo.GetOrderByName(name);
+        //}
+        public List<Order> GetOrder()
         {
             return _repo.GetOrders();
         }
+
+        
     }
 }
