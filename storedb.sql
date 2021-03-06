@@ -48,8 +48,6 @@ create table inventory
 create table orders
 (
 	id int Identity primary key,
-	customer int references customers(id),
-	product int references products(id),
 	OrderId int not null,
 	OrderQuantity int not null,
 	OrderTotal float not null
@@ -73,7 +71,7 @@ insert into locations (LocationAddress, LocationID) values
 
 insert into Products (ProductName, ProductDescription, ProductID, ProductPrice) values
 	('Original', 'Original Flavored Chips', '1001', '5.99'),
-	('Barbeque', 'Barbeque Flavored Chips', '1002', '6.20'),
+	('Barbeque', 'Barbeque Flavored Chips', '1002', '6.29'),
 	('Salt and Vinegar', 'Salt and Vinegar Flavored Chips', '1003', '4.99'),
 	('Sour Cream and Onion', 'Sour Crean and Onion Flavored Chips', '1004', '5.49');
 

@@ -38,6 +38,7 @@ namespace StoreUI
             Console.WriteLine("[3] View Locations");
             Console.WriteLine("[4] Update Locations");
             Console.WriteLine("[5] Search Customers");
+            Console.WriteLine("[6] Order History");
 
             Console.WriteLine("[9] Exit Menu");
             String userInput = Console.ReadLine();
@@ -68,6 +69,10 @@ namespace StoreUI
                 case "5":
 
                         SearchCustomers();
+                        break;
+                case "6":
+                        
+                        OrderHistory();
                         break;
                 case "9":
                         stay = false;
@@ -148,7 +153,15 @@ namespace StoreUI
             Console.WriteLine("Press any key to continue");
             Console.ReadLine();
             }
-
+            public void OrderHistory()
+            {
+                foreach (var item in _orderBL.GetOrder())
+                {
+                    Console.WriteLine(item.ToString());
+                }
+                    Console.WriteLine("Press any key to continue");
+                    Console.ReadLine();
+            }
 
         }
     }

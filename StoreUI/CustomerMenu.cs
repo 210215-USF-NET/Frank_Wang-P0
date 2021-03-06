@@ -158,7 +158,7 @@ namespace StoreUI
                 Console.WriteLine($"total: {newOrder.OrderTotal}");
 
                 _orderBL.AddOrder(newOrder);
-                Console.WriteLine($"You have ordered item #[{newOrder.OrderID}] with a quantity of [{newOrder.OrderQuantity}]");
+                Console.WriteLine($"You have Successfully Placed your order! Total: [{newOrder.OrderTotal}]");
 
                 
 
