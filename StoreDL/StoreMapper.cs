@@ -86,7 +86,8 @@ namespace StoreDL
         {
             return new Model.Order
             {
-                OrderID = order.OrderID,
+                CustomerName = order.CustomerName,
+                ProdID = order.ProdID,
                 OrderQuantity = order.OrderQuantity,
                 OrderTotal = order.OrderTotal
             };
@@ -96,7 +97,8 @@ namespace StoreDL
         {
             return new Entity.Order
             {
-                OrderID = order.OrderID,
+                CustomerName = order.CustomerName,
+                ProdID = order.ProdID,
                 OrderQuantity = order.OrderQuantity,
                 OrderTotal = order.OrderTotal
             };

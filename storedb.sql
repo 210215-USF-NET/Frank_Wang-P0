@@ -48,7 +48,8 @@ create table inventory
 create table orders
 (
 	id int Identity primary key,
-	OrderId int not null,
+	CustomerName varchar(50) not null,
+	ProdID int not null,
 	OrderQuantity int not null,
 	OrderTotal float not null
 

@@ -33,7 +33,7 @@ namespace StoreDL
             //.FirstOrDefault(x => x.OrderID == name);  
         //}
 
-        public List<Order> GetOrders()
+        public List<Model.Order> GetOrders()
         {
             return _context.Orders.Select(x => _mapper.ParseOrder(x)).ToList();
         }

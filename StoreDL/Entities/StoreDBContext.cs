@@ -78,7 +78,7 @@ namespace StoreDL.Entities
                     .HasMaxLength(50)
                     .IsUnicode(false);
 
-                entity.Property(e => e.LocationId).HasColumnName("LocationID");
+                entity.Property(e => e.LocationID).HasColumnName("LocationID");
             });
 
             modelBuilder.Entity<Order>(entity =>
@@ -87,12 +87,12 @@ namespace StoreDL.Entities
 
                 entity.Property(e => e.Id).HasColumnName("id");
 
-                entity.Property(e => e.Customer).HasColumnName("customer");
+                entity.Property(e => e.CustomerName)
+                    .IsRequired()
+                    .HasMaxLength(50)
+                    .IsUnicode(false);
 
-                entity.HasOne(d => d.CustomerNavigation)
-                    .WithMany(p => p.Orders)
-                    .HasForeignKey(d => d.Customer)
-                    .HasConstraintName("FK__orders__customer__3B0BC30C");
+                entity.Property(e => e.ProdID).HasColumnName("ProdID");
             });
 
             modelBuilder.Entity<Product>(entity =>

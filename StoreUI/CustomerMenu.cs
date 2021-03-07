@@ -137,6 +137,7 @@ namespace StoreUI
                 Order newOrder = new Order();
                 Product P = new Product();
                 newOrder.Customer = foundCustomer;
+                newOrder.CustomerName = foundCustomer.FirstName + " " + foundCustomer.LastName;
                 //Console.WriteLine($"{newOrder.Customer}");
                 //Console.WriteLine($"{newOrder.Customer.PhoneNumber}");
                 //currentLocation = SearchLocation(Console.ReadLine());
@@ -150,6 +151,7 @@ namespace StoreUI
                 newOrder.Product = selectProduct;
                 //newOrder.OrderID = int.Parse(Console.ReadLine());
                 Console.WriteLine($"You have ordered item #{selectProduct.ProductID}, price {selectProduct.ProductPrice}");
+                newOrder.ProdID = selectProduct.ProductID;
                 Console.WriteLine("Select the quantity: ");
                 newOrder.OrderQuantity = int.Parse(Console.ReadLine());
 

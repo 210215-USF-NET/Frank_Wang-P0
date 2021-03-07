@@ -1,7 +1,7 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Frank\\Revature Training\\Frank_Wang-P0\\storeui\\P0.csproj": {}
+    "C:\\Users\\Frank\\Revature Training\\Frank_Wang-P0\\storeUI\\P0.csproj": {}
   },
   "projects": {
     "C:\\Users\\Frank\\Revature Training\\Frank_Wang-P0\\StoreBL\\StoreBL.csproj": {
@@ -207,14 +207,14 @@
         }
       }
     },
-    "C:\\Users\\Frank\\Revature Training\\Frank_Wang-P0\\storeui\\P0.csproj": {
+    "C:\\Users\\Frank\\Revature Training\\Frank_Wang-P0\\storeUI\\P0.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Frank\\Revature Training\\Frank_Wang-P0\\storeui\\P0.csproj",
+        "projectUniqueName": "C:\\Users\\Frank\\Revature Training\\Frank_Wang-P0\\storeUI\\P0.csproj",
         "projectName": "P0",
-        "projectPath": "C:\\Users\\Frank\\Revature Training\\Frank_Wang-P0\\storeui\\P0.csproj",
+        "projectPath": "C:\\Users\\Frank\\Revature Training\\Frank_Wang-P0\\storeUI\\P0.csproj",
         "packagesPath": "C:\\Users\\Frank\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Frank\\Revature Training\\Frank_Wang-P0\\storeui\\obj\\",
+        "outputPath": "C:\\Users\\Frank\\Revature Training\\Frank_Wang-P0\\storeUI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "G:\\Microsoft\\Xamarin\\NuGet\\"

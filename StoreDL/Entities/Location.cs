@@ -9,6 +9,6 @@ namespace StoreDL.Entities
     {
         public int Id { get; set; }
         public string LocationAddress { get; set; }
-        public int LocationId { get; set; }
+        public int LocationID { get; set; }
     }
 }

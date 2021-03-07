@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "SR1XnwBu1jOoHXhXKL2bAKlLyy5a/e6xpmooaa7ZRfBSJaHcKIFowV5nejHlQt64cQ2BvlFmkYrVddD7gUttGA==",
+  "dgSpecHash": "eH4tVXp7IvW9r+1tJcgwVsB0/9GL3OzNtrugE0mrfw60mTuGFoBuhLcM6dS9z3uUPIaVL6TZpgD1GDcn73piLQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Frank\\Revature Training\\Frank_Wang-P0\\storeui\\P0.csproj",
+  "projectFilePath": "C:\\Users\\Frank\\Revature Training\\Frank_Wang-P0\\storeUI\\P0.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Frank\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Frank\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
